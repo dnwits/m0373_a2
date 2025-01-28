@@ -77,19 +77,24 @@ x= Math.floor(x); //redondear
 console.log(x);*/
 
 //Crea un programa que pregunti a l'usuari adivinar un número del 1 al 100, i li digui si ha acertat, o el número és més gran o més petit.
-let num;
-let numUser;
-let coincide;
+let x = Math.random()*10 + 1; //si vull que sigui del 1 al 10 sumo 1 per 
+//SALTAR EL 0
+console.log(x);
+x = Math.floor(x);
+console.log(x);
+let guessNumeric:number;
+do
+{
+  let guess = prompt("Advinia un numero");
+  guessNumeric = Number(guess);
+  if (guessNumeric> x)
+  {
+    console.log("Es mes petit");
+  }
+  else if (guessNumeric<x)
+  {
+    console.log("Es mes gran");
+  }
+}while(guessNumeric!=x);
 
-do {
-    numUser = Number(prompt("Escoga un numero del 1 al 10: "))
-    num = Math.random()*10+1;
-    num=Math.floor(num);
-    
-    if (numUser==num){
-        coincide=true
-        console.log("el numero ha coincidido :3 ", num)
-    } else{
-        coincide= false
-    }
-} while (coincide);
+console.log("acertat");

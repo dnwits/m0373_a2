@@ -21,6 +21,20 @@ for (const x of list) {
     ys.push(x * 2)
 }
 console.log(ys) // [ 16, 18, 8, 10, 12 ]
+//map ejemplo clase
+/* funcio map forma manual*/
+let dobles: number[]=[];
+for(const numero of list)
+    {
+        dobles.push(numero*2);
+    }
+
+console.log(dobles);
+
+let doblesmap: number[]=[];
+doblesmap = list.map(x => x*2);
+console.log("amb la funció map " + doblesmap);
+
 
 //FILTER
 const xs: number[] = [8, 9, 4, 5, 6]
