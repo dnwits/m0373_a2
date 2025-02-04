@@ -21,8 +21,9 @@ for (const x of list) {
     ys.push(x * 2)
 }
 console.log(ys) // [ 16, 18, 8, 10, 12 ]
+
 //map ejemplo clase
-/* funcio map forma manual*/
+/* funcio map forma manual y for-each*/
 let dobles: number[]=[];
 for(const numero of list)
     {
@@ -60,3 +61,11 @@ const array_nou: number[] = [8, 9, 4, 5, 6]
 const sum = array_nou.reduce((acc, x) => acc + x, 0) // acc: accumulator
 console.log(array_nou)
 console.log(sum) // 32
+
+//SLICE (torna una vista parcial de la llista) MAL
+// const sumaTotalReduce = list.reduce((acc, valor) => acc+valor, 0);
+// console.log("reduce"+ sumaTotalReduce);
+
+// let llistaCompleta: number[] = llistaRecortada.slice(2,5);
+// console.log("retallada: "+llistaRecortada);
+
