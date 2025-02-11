@@ -4,7 +4,7 @@ interface Pokemon {
     nivel:Number;
 }
 
-const pokemons: Pokemon[] = [
+const pokemons1: Pokemon[] = [
     { nombre: "Pikachu", tipo: "Elèctric", nivel: 25 },
     { nombre: "Charmander", tipo: "Foc", nivel: 18 },
     { nombre: "Squirtle", tipo: "Aigua", nivel: 20 },
@@ -33,9 +33,9 @@ const pokemons: Pokemon[] = [
 ];
 
 
-const tablaBody = document.getElementById("tabla-body");
+const tablaBody1 = document.getElementById("tabla-body");
 
-if (tablaBody) {
+if (tablaBody1) {
     pokemons.forEach(pokemon => {
         const fila = document.createElement("tr");
 
@@ -51,6 +51,6 @@ if (tablaBody) {
         celdaNivel.textContent = pokemon.nivel.toString();
         fila.appendChild(celdaNivel);
 
-        tablaBody.appendChild(fila);
+        tablaBody1.appendChild(fila);
     });
 }
