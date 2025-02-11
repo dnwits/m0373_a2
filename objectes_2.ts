@@ -78,7 +78,7 @@ const portatil:Dispositiu={
 };
 console.log(portatil);
 portatil.descripcio();
-
+//----------------------------------------------------------------------------------------------------------------
 //DEFINICIÓ ARRAYS D'Objectes
 type Alumne = {
     nom: string,
@@ -99,3 +99,46 @@ for(const students of llistatAlumnes){
 llistatAlumnes.forEach(student1 => {
     console.log(student1);
 });
+
+llistatAlumnes.push({nom: "Miquel Angel", edat:24});
+//----------------------------------------------------------------------------------------------------------------
+//definir objectes amb class
+class Llibre{
+    //els atributs es defineixen als constructor
+    constructor(public titol:string, public autor:string, public anyPublicacio:Number){
+    }
+    descripcio(): string{
+        return this.titol+" - "+this.autor+" - "+this.anyPublicacio
+    }
+}
+const book = new Llibre("La historia interminable", "Michael Ende", 1950);
+console.log(book.descripcio());
+
+//----------------------------------------------------------------------------------------------------------------
+//prova
+interface Producte {
+    nom: string;
+    preu: number;
+    stock: number;
+};
+class Botiga {
+    private productes: Producte[] = [];
+  
+    afegirProducte(producte: Producte) {
+      this.productes.push(producte);
+    }
+  
+    mostrarProductes() {
+      this.productes.forEach((p) => console.log(`${p.nom}: ${p.preu}€ (Stock: ${p.stock})`));
+    }
+    //nou metode ----- restar stock d'un producte
+    restarProductes(nom: string, numVenta:Number){
+        const productFiltrats = this.productes.filter((p)=>p.nom===nom)
+    }
+};
+
+const botiga = new Botiga();
+botiga.afegirProducte({ nom: "Mòbil", preu: 400, stock: 10 });
+botiga.afegirProducte({ nom: "Portàtil", preu: 1200, stock: 5 });
+
+botiga.mostrarProductes();
