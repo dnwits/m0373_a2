@@ -36,7 +36,7 @@ const pokemons1: Pokemon[] = [
 const tablaBody1 = document.getElementById("tabla-body");
 
 if (tablaBody1) {
-    pokemons.forEach(pokemon => {
+    pokemons1.forEach(pokemon => {
         const fila = document.createElement("tr");
 
         const celdaNombre = document.createElement("td");
