@@ -1,0 +1,17 @@
+[
+  {
+    "nom": "ANNA",
+    "edat": 14,
+    "curs": "3r ESO"
+  },
+  {
+    "nom": "JOAN",
+    "edat": 15,
+    "curs": "4t ESO"
+  },
+  {
+    "nom": "MARIA",
+    "edat": 13,
+    "curs": "2n ESO"
+  }
+]

@@ -1,0 +1,8 @@
+[
+    { "nom": "Leo Messi", "edat": 36, "equip": "Inter Miami" },
+    { "nom": "Cristiano Ronaldo", "edat": 38, "equip": "Al Nassr" },
+    { "nom": "Pedri", "edat": 20, "equip": "FC Barcelona" },
+    { "nom": "Kylian Mbappé", "edat": 24, "equip": "Paris Saint-Germain" },
+    { "nom": "Erling Haaland", "edat": 22, "equip": "Manchester City" }
+  ]
+  
