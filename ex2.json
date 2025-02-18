@@ -1,0 +1,23 @@
+
+{
+    "nom": "Robert",
+    "edat": 20,
+    "tipus": "Grau Superior",
+    "assignaturtes": [
+    {
+        "nom": "Programació",
+        "cicle": "DAM-1",
+        "hores_duracio": 300
+    },
+    {
+        "nom": "Sistemes informàtics",
+        "cicle": "DAM-1",
+        "hores_duracio": 180
+    },
+    {
+        "nom": "Llenguatge de marques",
+        "cicle": "DAM-1",
+        "hores_duracio": 230
+    }
+    ]
+}
