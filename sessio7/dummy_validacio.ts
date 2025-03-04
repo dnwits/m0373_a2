@@ -13,6 +13,6 @@ recipes.forEach(recipe =>{
     if(!valid){
         console.log("Errors ", validateRecipe.errors);
     } else {
-        console.log(recipe.name);
+        console.log("Recepta: ",recipe.id," -> ",recipe.name);
     }
 })
