@@ -7,12 +7,12 @@ const data = await response.json()
 const recipes: Recipes[] = data.recipes
 
 const ajv = new Ajv();
-const validateUser = ajv.compile(recipeSchema);
-recipes.forEach(user =>{
-    const valid = validateUser(user) //true or false
+const validateRecipe = ajv.compile(recipeSchema);
+recipes.forEach(recipe =>{
+    const valid = validateRecipe(recipe) //true or false
     if(!valid){
-        console.log("Errors ", validateUser.errors);
+        console.log("Errors ", validateRecipe.errors);
     } else {
-        console.log(user.name);
+        console.log(recipe.name);
     }
 })
