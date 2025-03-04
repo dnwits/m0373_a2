@@ -1,6 +1,6 @@
 //definir estructures necesarias para crear el json schema
 export type User = {
-    id: string
+    id: number
     name: string
     username: string
     email: string
@@ -17,8 +17,8 @@ type Address={
     geo: Geo
 }
 type Geo ={
-    lat: number
-    lng: number
+    lat: string
+    lng: string
 }
 type Company ={
     name: string
