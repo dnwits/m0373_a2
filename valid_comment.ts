@@ -1,6 +1,6 @@
 import Ajv from "ajv" //importar avj para la validación
-import type { Comment } from "comment.ts" //import de la clase Comment
-import commentSchema from "comment.json" //import els schema autogenerado
+import type { Comment } from "./comment" //import de la clase Comment
+import commentSchema from "./comment.json" //import els schema autogenerado
 
 const response = await fetch('https://jsonplaceholder.typicode.com/comments'); //api con los datos
 const comments: Comment[] = await response.json(); //guardar los datos en un array compuesto por obj de la clase Comment y esperar a que el json responda

@@ -1,10 +1,4 @@
-interface Pokemon {
-    nombre: string;
-    tipo: string;
-    nivel:Number;
-}
-
-const pokemons2: Pokemon[] = [
+var pokemons1 = [
     { nombre: "Pikachu", tipo: "Elèctric", nivel: 25 },
     { nombre: "Charmander", tipo: "Foc", nivel: 18 },
     { nombre: "Squirtle", tipo: "Aigua", nivel: 20 },
@@ -31,26 +25,19 @@ const pokemons2: Pokemon[] = [
     { nombre: "Glaceon", tipo: "Glaç", nivel: 26 },
     { nombre: "Sylveon", tipo: "Fada", nivel: 30 }
 ];
-
-
-const tablaBody2 = document.getElementById("tabla-body");
-
+var tablaBody1 = document.getElementById("tabla-body");
 if (tablaBody1) {
-    pokemons1.forEach(pokemon => {
-        const fila = document.createElement("tr");
-
-        const celdaNombre = document.createElement("td");
+    pokemons1.forEach(function (pokemon) {
+        var fila = document.createElement("tr");
+        var celdaNombre = document.createElement("td");
         celdaNombre.textContent = pokemon.nombre;
         fila.appendChild(celdaNombre);
-
-        const celdaTipo = document.createElement("td");
+        var celdaTipo = document.createElement("td");
         celdaTipo.textContent = pokemon.tipo;
         fila.appendChild(celdaTipo);
-
-        const celdaNivel = document.createElement("td");
+        var celdaNivel = document.createElement("td");
         celdaNivel.textContent = pokemon.nivel.toString();
         fila.appendChild(celdaNivel);
-
-        tablaBody2.appendChild(fila);
+        tablaBody1.appendChild(fila);
     });
 }
