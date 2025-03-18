@@ -38,7 +38,7 @@ primerosCinco.forEach(comment => {
     console.log(`Email recortado: ${trimmedEmail}`);
 });
 
-//interacció amb html (js)
+//---------------------interacció amb html----------------------------
 const tablaBody = document.getElementById("comments-body");
 
 if (tablaBody) {
@@ -62,7 +62,7 @@ if (tablaBody) {
         row.appendChild(bodyCell);
 
         tablaBody.appendChild(row);
-    });
+    }); 
 } else {
     console.error("No se encontró el elemento con ID 'comments-body'");
 }
