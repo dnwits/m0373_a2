@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentarios</title>
-    
+    <title>Comentaris Valids</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Comentarios válidos</h1>
-    <ul id="commentsList">
-        <!-- Los elementos de la lista se insertarán aquí dinámicamente -->
-    </ul>
+    <h1>Comentaris Valids</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Email (Recortado)</th>
+                <th>Comentari</th>
+            </tr>
+        </thead>
+        <tbody id="comments-body">
+            <!-- Aquí se insertarán los comentarios desde valid_comments.ts -->
+        </tbody>
+    </table>
 
-    <script src="valid_comment.ts"></script> <!-- Enlaza tu archivo TypeScript compilado a JavaScript -->
+    <script type="module" src="valid_comments.ts"></script> 
 </body>
 </html>
+

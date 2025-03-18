@@ -39,20 +39,30 @@ primerosCinco.forEach(comment => {
 });
 
 //interacció amb html (js)
-const renderList = (comments: Comment[]) => {
-    const list = document.getElementById("commentsList")!;
+const tablaBody = document.getElementById("comments-body");
 
-    comments.forEach(comment => {
-        const trimmedEmail = trimEmail(comment.email);
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-            <strong>Nombre:</strong> ${comment.name}<br>
-            <strong>Email:</strong> ${trimmedEmail}<br>
-            <strong>Comentario:</strong> ${comment.body}
-        `;
-        list.appendChild(listItem);
+if (tablaBody) {
+    primerosCinco.forEach(comment => {
+        const row = document.createElement("tr");
+
+        const idCell = document.createElement("td");
+        idCell.textContent = comment.id.toString();
+        row.appendChild(idCell);
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = comment.name;
+        row.appendChild(nameCell);
+
+        const emailCell = document.createElement("td");
+        emailCell.textContent = trimEmail(comment.email);
+        row.appendChild(emailCell);
+
+        const bodyCell = document.createElement("td");
+        bodyCell.textContent = comment.body;
+        row.appendChild(bodyCell);
+
+        tablaBody.appendChild(row);
     });
-};
-
-// Llamar a la función para renderizar la lista
-renderList(primerosCinco);
+} else {
+    console.error("No se encontró el elemento con ID 'comments-body'");
+}
